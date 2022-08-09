@@ -1,0 +1,40 @@
+def A():
+	print("="*100)
+
+
+A()
+print("-------------------------------------------BANCO SICOOB---------------------------------------------")
+A()
+nome=input("Digte seu nome: ")
+A()
+print("Olá ", nome)
+print("O que deseja realizar?")
+A()
+f=input("Para Saque Digite 'S' ou para Depóstio Digite 'D': ").upper()
+A()
+if f=="S":
+	valor=input("Digite o valor do saque: ")
+	A()
+	print("----------Você fez o saque de " + valor + " REAIS----------")
+	A()
+elif f=="D":
+	valor2=input("Digite o valor do deposito: ")
+	A()
+	print("----------Você fez o deposito de ", valor2, " REAIS---------" )
+	print("----------OBRIGADO PELA PREFERENCIA----------")
+	A()
+else:
+	f=input("Responda a pergunta com 'S' para Saque ou para Depóstio Digite 'D': ")
+	A()
+	if f == "S":
+		valor = input("Digite o valor do saque: ")
+		A()
+		print("----------Você fez o saque de " + valor + " REAIS----------")
+		A()
+	elif f == "D":
+		valor2 = input("Digite o valor do deposito: ")
+		A()
+		print("----------Você fez o deposito de ", valor2, " REAIS na sua conta bancaria---------")
+		print("------------------------------OBRIGADO PELA SUA PREFERENCIA---------------------------")
+		A()
+   
