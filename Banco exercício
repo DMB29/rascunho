@@ -1,40 +1,85 @@
 def A():
-	print("="*100)
+    print("=" * 100)
 
 
+dados = {}
 A()
 print("-------------------------------------------BANCO SICOOB---------------------------------------------")
 A()
-nome=input("Digte seu nome: ")
+print("SEJA BEM VINDO AO BANCO SICOOB!!!")
+nome = input("Digite seu nome: ")
 A()
 print("Olá ", nome)
-print("O que deseja realizar?")
-A()
-f=input("Para Saque Digite 'S' ou para Depóstio Digite 'D': ").upper()
-A()
-if f=="S":
-	valor=input("Digite o valor do saque: ")
-	A()
-	print("----------Você fez o saque de " + valor + " REAIS----------")
-	A()
-elif f=="D":
-	valor2=input("Digite o valor do deposito: ")
-	A()
-	print("----------Você fez o deposito de ", valor2, " REAIS---------" )
-	print("----------OBRIGADO PELA PREFERENCIA----------")
-	A()
+conta = input("Você já possui uma conta cadastrada? (responda com s ou n): ").upper()
+if conta == "S":
+    A()
+    print("Primeiramente faça o seu login:")
+    input("Email: ")
+    senha = input("SENHA: ")
+elif conta == "N":
+    A()
+    print("Para se cadastrar preencha os campos a seguir")
+    A()
+    input("EMAIL: ")
+    senha=input("SENHA: ")
+    input("CPF: ")
+    input("TELEFONE: ")
+    A()
+    print("CADASTRO CONCLUIDO")
+    A()
+    print("Agora que você já está cadastrado")
 else:
-	f=input("Responda a pergunta com 'S' para Saque ou para Depóstio Digite 'D': ")
-	A()
-	if f == "S":
-		valor = input("Digite o valor do saque: ")
-		A()
-		print("----------Você fez o saque de " + valor + " REAIS----------")
-		A()
-	elif f == "D":
-		valor2 = input("Digite o valor do deposito: ")
-		A()
-		print("----------Você fez o deposito de ", valor2, " REAIS na sua conta bancaria---------")
-		print("------------------------------OBRIGADO PELA SUA PREFERENCIA---------------------------")
-		A()
-   
+    input("Responda a pergunta com 'S' ou 'N'!").upper()
+    if conta == "S":
+        A()
+    elif conta == "N":
+        A()
+        print("Para se cadastrar preencha os campos a seguir")
+        A()
+        input("EMAIL: ")
+        input("SENHA: ")
+        input("CPF: ")
+        input("TELEFONE: ")
+        A()
+        print("CADASTRO CONCLUIDO")
+        A()
+        print("Agora que você já está cadastrado")
+
+print("O que deseja realizar?")
+f = input("Para Saque Digite 'S' ou para Depóstio Digite 'D': ").upper()
+A()
+
+if f == "S":
+    valor = input("Digite o valor do saque: ")
+    A()
+    confirmacao = input("Digite a sua senha novamente para concluir a transação: ")
+    if confirmacao == senha:
+        A()
+        print("---------------------------Você fez o saque de " + valor + " REAIS---------------------------")
+        print("------------------------------OBRIGADO PELA SUA PREFERENCIA---------------------------")
+        A()
+elif f == "D":
+    valor2 = input("Digite o valor do deposito: ")
+    A()
+    confirmacao = input("Digite a sua senha novamente para concluir a transação: ")
+    if confirmacao == senha:
+        A()
+        print("----------O valor de ", valor2, " REAIS foi depositado na sua conta bancária---------")
+        print("------------------------------OBRIGADO PELA SUA PREFERENCIA---------------------------")
+    A()
+else:
+    f = input("Responda a pergunta com 'S' para Saque ou para Depóstio Digite 'D': ")
+    A()
+    if f == "S":
+        valor = int(input("Digite o valor do saque: "))
+        A()
+        print("----------Você fez o saque de " + valor + " REAIS----------")
+        A()
+    elif f == "D":
+        valor2 = int(input("Digite o valor do deposito: "))
+        A()
+        confirmacao=input("Digite a sua senha novamente para concluir a transação: ")
+        if confirmacao==senha:
+            print("----------O valor de ", valor2, " REAIS foi depositado na sua conta bancária---------")
+            print("------------------------------OBRIGADO PELA SUA PREFERENCIA---------------------------")
+            A()
