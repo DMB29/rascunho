@@ -1,0 +1,4 @@
+med=int(input("Digite quantos metros: "))
+mil=med*1000
+cen=med*100
+print("Este valor se torna {} centimetros\nOu {} milímetros.".format(cen,mil))
